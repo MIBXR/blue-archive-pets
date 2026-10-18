@@ -39,7 +39,7 @@ const hero=players.get('hero');
 const install=players.get('install');
 pauseButton.addEventListener('click',()=>{pauseOverridden=true;applyPause(!paused);});
 
-const contentReady=fetch(new URL('./pet-content.json',import.meta.url)).then(r=>{if(!r.ok)throw Error();return r.json();}).then(all=>{content=all[pet];updateContent();}).catch(()=>showError('动作说明暂时无法加载，请刷新后重试。'));
+fetch(new URL('./pet-content.json',import.meta.url)).then(r=>{if(!r.ok)throw Error();return r.json();}).then(all=>{content=all[pet];updateContent();}).catch(()=>showError('动作说明暂时无法加载，请刷新后重试。'));
 function updateStageNote(){
   const source=theater.canvas.dataset.petSource;
   const note=document.querySelector('[data-stage-note]');
@@ -57,9 +57,8 @@ function updateContent(){
   theater.canvas.setAttribute('aria-label',mode==='directions'?`${pet==='hibiki'?'响':'时'}：看向${directionNames[direction]}`:`${pet==='hibiki'?'响':'时'}：${content.labels[index]}`);
 }
 function setState(next){
-  state=next;setMode('actions');theater.setState(next);
+  state=next;setMode('actions');
   for(const button of document.querySelectorAll('[data-state]'))button.setAttribute('aria-pressed',String(button.dataset.state===next));
-  updateContent();updateStageNote();
 }
 function setMode(next){
   mode=next;
@@ -106,7 +105,7 @@ const textarea=document.querySelector('[data-instruction]');
 const details=document.querySelector('.install-details');
 let copyRequest=0;
 let metadata;
-const metadataReady=loadInstallMetadata({baseUrl:document.baseURI}).then(value=>{metadata=value;updateInstruction();return value;}).catch(error=>{textarea.value='安装信息暂时无法加载。你仍可以直接下载 ZIP，解压后阅读包内 README.md。';return null;});
+loadInstallMetadata({baseUrl:document.baseURI}).then(value=>{metadata=value;updateInstruction();return value;}).catch(error=>{textarea.value='安装信息暂时无法加载。你仍可以直接下载 ZIP，解压后阅读包内 README.md。';return null;});
 function updateInstruction(){if(metadata)textarea.value=createInstallInstruction(metadata,pet,{activate:activate.checked,baseUrl:document.baseURI});}
 activate.addEventListener('change',()=>{++copyRequest;updateInstruction();feedback.textContent=activate.checked?'安装指令将请求导入后启用这只桌宠。':'安装指令将保留当前启用的桌宠。';});
 details.addEventListener('toggle',()=>{if(details.open)updateInstruction();});
