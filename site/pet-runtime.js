@@ -123,7 +123,7 @@ function loadHDRow(pet, row) {
         image.onerror = () => reject(new Error(`${pet}: the original animation image could not load`));
         image.decoding = 'async';
         const url = new URL(definition.file, hdManifestUrl);
-        if (typeof definition.sha256 === 'string') url.searchParams.set('v', definition.sha256.slice(0, 16));
+        url.search = hdManifestUrl.search;
         image.src = url.href;
       });
     });

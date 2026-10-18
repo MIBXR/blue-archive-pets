@@ -25,6 +25,6 @@ python site/tools/prepare-hd.py
 
 ## 来源与校验
 
-`site/assets/motion-hd/manifest.json` 包含每行原稿路径与 SHA-256、透明源条与注册条 SHA-256、每帧源矩形和绘制矩形、原始网格及身体范围、共同地面和比例。`processing-report.json` 记录背景处理方式、alpha 守恒以及脚底数据。146 帧的强 alpha 范围全部位于网页舞台内。
+生成的 `site/assets/motion-hd/manifest.json` 包含每行原稿、透明源条与注册条路径、每帧源矩形和绘制矩形、原始网格及身体范围、共同地面和比例。`processing-report.json` 记录背景处理方式、alpha 守恒以及脚底数据。制作过程不计算或校验内容摘要；已有记录中的摘要作为存档保留。高清图片的缓存参数沿用播放器中清单 URL 的版本号，更新高清素材时同步调整该版本号。146 帧的强 alpha 范围全部位于网页舞台内。
 
 时的两张真实高清转椅原稿已从原制作工作区恢复到 `selected-sources/look-row-9.png` 和 `look-row-10.png`，单姿态有效高度约 500 像素。`look-source-provenance.json` 保存原稿身份与批准的组件归属；四个分离光环按原制作归属分配，十六方向使用同一缩小比例，并保留原稿与原动作顺序。专有绿色背景梯度的识别阈值只用于这两张原稿，其余素材处理规则保持原值。

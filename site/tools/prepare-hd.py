@@ -8,7 +8,7 @@ All inputs resolve relative to this checkout; all outputs go into site/assets/.
 from pathlib import Path
 from PIL import Image, ImageFilter
 import numpy as np
-import json, hashlib, shutil
+import json, shutil
 
 repo=Path(__file__).resolve().parents[2]
 assets=repo/'site'/'assets'
@@ -57,8 +57,6 @@ def main_visuals():
     shutil.copyfile(hibiki,assets/'hibiki-main.png')
     result,stats=matte(toki,'green')
     result.save(assets/'toki-main.png',compress_level=9)
-    stats['source_sha256']=hashlib.sha256(toki.read_bytes()).hexdigest()
-    stats['output_sha256']=hashlib.sha256((assets/'toki-main.png').read_bytes()).hexdigest()
     return stats
 
 STATES=['idle','running-right','running-left','waving','jumping','failed','waiting','running','review','look-row-9','look-row-10']
@@ -117,7 +115,7 @@ def hd_strips():
             for x0,x1 in zip(boundaries,boundaries[1:]):
                 bbox=Image.fromarray(alpha[:,x0:x1]).point(lambda a:255 if a>24 else 0).getbbox()
                 frames.append({'x':x0,'y':0,'width':x1-x0,'height':image.height,'foreground_bbox':bbox,'boundary_occupancy':int(column_occupancy[x0])})
-            records.append({'pet':pet,'state':state,'row':row,'count':count,'source':str(source.relative_to(repo)).replace('\\','/'),'file':target.name,'source_width':image.width,'source_height':image.height,'frames':frames,'source_sha256':hashlib.sha256(source.read_bytes()).hexdigest(),'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),**stats})
+            records.append({'pet':pet,'state':state,'row':row,'count':count,'source':str(source.relative_to(repo)).replace('\\','/'),'file':target.name,'source_width':image.width,'source_height':image.height,'frames':frames,**stats})
             print(pet,state,[(f['x'],f['width'],f['foreground_bbox'],f['boundary_occupancy']) for f in frames])
     return records
 
@@ -218,7 +216,7 @@ def register_hd(records,main_report):
         assert int(registered[:,:,3].sum())==int(alpha.sum()),record['file']
         registered_name=record['file'].replace('.png','-registered.png')
         Image.fromarray(registered,'RGBA').save(folder/registered_name,compress_level=9)
-        row={'row':record['row'],'state':record['state'],'file':registered_name,'source_width':int(registered.shape[1]),'source_height':int(registered.shape[0]),'frame_width':cell_width,'frame_height':record['source_height'],'frame_count':record['count'],'sha256':hashlib.sha256((folder/registered_name).read_bytes()).hexdigest(),'frames':frames,'scale':round(scale,6),'registration':{'mode':'one-scale-and-one-y-offset-per-action','source_ground_y':source_ground,'reference_body_height':reference_height,'source_grid_step':record['source_width']/record['count'],'component_assignment':'body and props connected components; edges follow adjacent component','original_source':record['source'],'original_source_sha256':record['source_sha256'],'transparent_source_file':record['file'],'transparent_source_sha256':record['sha256'],'transparent_source_dimensions':[record['source_width'],record['source_height']]}}
+        row={'row':record['row'],'state':record['state'],'file':registered_name,'source_width':int(registered.shape[1]),'source_height':int(registered.shape[0]),'frame_width':cell_width,'frame_height':record['source_height'],'frame_count':record['count'],'frames':frames,'scale':round(scale,6),'registration':{'mode':'one-scale-and-one-y-offset-per-action','source_ground_y':source_ground,'reference_body_height':reference_height,'source_grid_step':record['source_width']/record['count'],'component_assignment':'body and props connected components; edges follow adjacent component','original_source':record['source'],'transparent_source_file':record['file'],'transparent_source_dimensions':[record['source_width'],record['source_height']]}}
         manifest['pets'][record['pet']]['rows'].append(row)
         report.append({'pet':record['pet'],'state':record['state'],'matting':{key:record[key] for key in ['method','background_rgb','background_strength','partial_pixels'] if key in record},'lost_pixels':lost,'alpha_sum_preserved':True,'common_source_ground':source_ground,'reference_height':reference_height,'scale':scale,'draw_y':draw_y,'feet_bottoms':[p['bbox'][3] for p in bodies],'registration':row['registration']})
         print(record['pet'],record['state'],'scale',round(scale,3),'ground',source_ground,'feet',[p['bbox'][3] for p in bodies])
@@ -242,8 +240,6 @@ def chair_hd():
     heights=[]
     for source_record in provenance['rows']:
         source=source_folder/source_record['original_source']
-        source_sha=hashlib.sha256(source.read_bytes()).hexdigest()
-        assert source_sha==source_record['source_sha256'],source
         original=np.asarray(Image.open(source).convert('RGBA'))
         assert original.shape[:2]==(source_record['source_height'],source_record['source_width'])
         rgb=original[:,:,:3].astype(np.int16)
@@ -314,7 +310,7 @@ def chair_hd():
         filename=transparent_name.replace('.png','-registered.png')
         target=folder/filename
         Image.fromarray(registered,'RGBA').save(target,compress_level=9)
-        row={'row':record['row'],'state':state,'file':filename,'source_width':cell_width*8,'source_height':height,'frame_width':cell_width,'frame_height':height,'frame_count':8,'sha256':hashlib.sha256(target.read_bytes()).hexdigest(),'frames':frames,'scale':round(scale,6),'registration':{'mode':'one-shared-scale-for-sixteen-chair-directions-and-original-nominal-grid','source_ground_y':source_ground,'reference_body_height':reference_height,'source_grid_step':width/8,'component_assignment':'approved original four-connected pose and halo ownership; soft edges follow adjacent component','original_source':source.relative_to(repo).as_posix(),'original_source_sha256':record['source_sha256'],'transparent_source_file':transparent_name,'transparent_source_sha256':hashlib.sha256((folder/transparent_name).read_bytes()).hexdigest(),'transparent_source_dimensions':[width,height],'source_provenance':provenance_path.relative_to(repo).as_posix()}}
+        row={'row':record['row'],'state':state,'file':filename,'source_width':cell_width*8,'source_height':height,'frame_width':cell_width,'frame_height':height,'frame_count':8,'frames':frames,'scale':round(scale,6),'registration':{'mode':'one-shared-scale-for-sixteen-chair-directions-and-original-nominal-grid','source_ground_y':source_ground,'reference_body_height':reference_height,'source_grid_step':width/8,'component_assignment':'approved original four-connected pose and halo ownership; soft edges follow adjacent component','original_source':source.relative_to(repo).as_posix(),'transparent_source_file':transparent_name,'transparent_source_dimensions':[width,height],'source_provenance':provenance_path.relative_to(repo).as_posix()}}
         rows=manifest['pets']['toki']['rows']
         rows[:]=[item for item in rows if item['row']!=record['row']]
         rows.append(row)
