@@ -35,7 +35,7 @@
   min-height: 44px;
   margin-top: 7px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
   cursor: pointer;
 }
@@ -43,7 +43,7 @@
   min-height: 20px;
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.8;
 }
 .chair-story-visual {
@@ -72,7 +72,7 @@
   top: 13px;
   left: 17px;
   color: var(--muted);
-  font-size: 9px;
+  font-size: 12px;
   letter-spacing: .12em;
 }
 .chair-story-direction {
@@ -81,7 +81,7 @@
   right: 17px;
   margin: 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: .04em;
 }
 .chair-story-canvas, .chair-story-fallback {
@@ -96,7 +96,7 @@
 .chair-story-source {
   margin: 14px 0 0;
   color: var(--muted);
-  font-size: 10px;
+  font-size: 12px;
   line-height: 1.8;
 }
 @media (max-width: 850px) {
@@ -109,12 +109,12 @@
   .chair-story-visual { min-height: 273px; }
   .chair-story-buttons { gap: 11px; }
   .chair-story-buttons .button { padding-inline: 19px; }
-  .chair-story-follow { font-size: 11px; }
+  .chair-story-follow { font-size: 12px; }
 }
 @media (max-width: 350px) {
   .chair-story { padding-inline: 15px; }
   .chair-story-copy h3 { font-size: 23px; }
-  .chair-story-buttons .button { padding-inline: 17px; font-size: 11px; }
+  .chair-story-buttons .button { padding-inline: 17px; font-size: 12px; }
 }
 @media (forced-colors: active) {
   .chair-story, .chair-story-visual { border-color: CanvasText; }
