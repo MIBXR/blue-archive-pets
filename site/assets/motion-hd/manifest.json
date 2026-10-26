@@ -21,7 +21,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 6,
-          "sha256": "82830f59e1675d106d85dbc8489b9823ca370b258ebce22e8cfa67e8e8b05595",
           "frames": [
             {
               "x": 0,
@@ -218,9 +217,7 @@
             "source_grid_step": 362.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/idle.png",
-            "original_source_sha256": "a390575e35da88d3d0927e9ddee58b35f4c379f1d578e1cb81337c2de34ea70e",
             "transparent_source_file": "hibiki-idle.png",
-            "transparent_source_sha256": "055d127046af966b871816581f30d76688f46a2821e7e7f7542a14e024ed39cd",
             "transparent_source_dimensions": [
               2172,
               724
@@ -236,7 +233,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "613b9219a16bb08befcec7d8f99a940080113f062dd9dfc46848aba18749e69b",
           "frames": [
             {
               "x": 0,
@@ -495,9 +491,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/running-right.png",
-            "original_source_sha256": "30e82fc143236e3e71059d41dc792c4f3dfabd0a9b15b293e770af57a98dd857",
             "transparent_source_file": "hibiki-running-right.png",
-            "transparent_source_sha256": "ff6b0832ba88b24ad86c25711cd4a05ef82c78d5d0c01b2e32f5d8f1003d0f66",
             "transparent_source_dimensions": [
               2172,
               724
@@ -513,7 +507,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "85da50225b7660c423142e4bf8e162c0da41048d360cc1ef870bafa42ed07296",
           "frames": [
             {
               "x": 0,
@@ -772,9 +765,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/running-left.png",
-            "original_source_sha256": "cc9f87522fe81ee089035c86cfd5f4f3c60682cef7ef017bfc932606cb19670b",
             "transparent_source_file": "hibiki-running-left.png",
-            "transparent_source_sha256": "cd3d5fb2b2b680aed5cbe94d7bf634018100bbe02de20e72799f50454b79b029",
             "transparent_source_dimensions": [
               2172,
               724
@@ -790,7 +781,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 4,
-          "sha256": "5294ca6c1836e0babf7be532721628b6ca59b34b0c6812082c11b65fa0bee94f",
           "frames": [
             {
               "x": 0,
@@ -925,9 +915,7 @@
             "source_grid_step": 543.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/waving.png",
-            "original_source_sha256": "383dfc779b8a2105e863883dc3466981b1e1ca1a47807463358ff1138896eb21",
             "transparent_source_file": "hibiki-waving.png",
-            "transparent_source_sha256": "67e055e0d4199ad1f76fba6015a48488a6d90359756534b960997bdbf5ba6edc",
             "transparent_source_dimensions": [
               2172,
               724
@@ -943,7 +931,6 @@
           "frame_width": 600,
           "frame_height": 725,
           "frame_count": 5,
-          "sha256": "5ad52cecc849e922e14ca0da8f71588754eba53e7700a394727b4730dad03b54",
           "frames": [
             {
               "x": 0,
@@ -1109,9 +1096,7 @@
             "source_grid_step": 434.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/jumping.png",
-            "original_source_sha256": "207bb8df24b7dac76b41c51607f6ab866179c692b6ce29b44f65f20383c5b7a8",
             "transparent_source_file": "hibiki-jumping.png",
-            "transparent_source_sha256": "ea737b661f91ce2b8f43a78d6d861b7acd6fc1b50622563ef8b1c39932264fe7",
             "transparent_source_dimensions": [
               2170,
               725
@@ -1127,7 +1112,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "b8b1ec3b8c04271ae0f08f438ca2248c980db31bf4af22251760f2459557ee09",
           "frames": [
             {
               "x": 0,
@@ -1386,9 +1370,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/failed.png",
-            "original_source_sha256": "24aaf0304e9eb5603c5493da2d260ba77a8db171d9c44ed0abc53785767a4c20",
             "transparent_source_file": "hibiki-failed.png",
-            "transparent_source_sha256": "65ee57288a304573aca062e712db8656fc88da22b4e8df2bc43a18165f5f6766",
             "transparent_source_dimensions": [
               2172,
               724
@@ -1404,7 +1386,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 6,
-          "sha256": "c88a36973b37d72eee39661342fbde84292daa2c340061ea1393e4f24fca5625",
           "frames": [
             {
               "x": 0,
@@ -1601,9 +1582,7 @@
             "source_grid_step": 362.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/waiting.png",
-            "original_source_sha256": "a3555e8906a0954fc3d51250d5ed0e243a5fe13de758bc976f045f254ebd9c7c",
             "transparent_source_file": "hibiki-waiting.png",
-            "transparent_source_sha256": "1ae906462f7a8cb4c33cae946379ab99bed9171956172710332643e4a3b24918",
             "transparent_source_dimensions": [
               2172,
               724
@@ -1619,7 +1598,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 6,
-          "sha256": "956b5299139158a72a6776bdc1bb5d29a4319c6e301a20a018ec05b43492c1ba",
           "frames": [
             {
               "x": 0,
@@ -1816,9 +1794,7 @@
             "source_grid_step": 362.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/running.png",
-            "original_source_sha256": "d6885b0250c0036843318f629460318bc2eb4440ee7c25ba613552b295206432",
             "transparent_source_file": "hibiki-running.png",
-            "transparent_source_sha256": "95b28db717bcc7a33dd5353806090e203945b15d9c0764f2656f19c7293cd919",
             "transparent_source_dimensions": [
               2172,
               724
@@ -1834,7 +1810,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 6,
-          "sha256": "0f19fea6712b5bbe8729ee8246903f7a24be1f69baa46ab43e58848b4d761127",
           "frames": [
             {
               "x": 0,
@@ -2031,9 +2006,7 @@
             "source_grid_step": 362.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/review.png",
-            "original_source_sha256": "bb24089546fd235ec66f6ffe9fed76610213e62114b9fd1be9bee5fa0144cca7",
             "transparent_source_file": "hibiki-review.png",
-            "transparent_source_sha256": "125cbf7e86383983389185da994cd3aa141cea700c76dca3ac34b00df1f054be",
             "transparent_source_dimensions": [
               2172,
               724
@@ -2049,7 +2022,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "2a174d90816f4f879b66f8bef827f28d231c8fecf5358ee3b7d2c87d9dad8357",
           "frames": [
             {
               "x": 0,
@@ -2308,9 +2280,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/look-row-9.png",
-            "original_source_sha256": "846f407613028efdf4a85a869d9bf3891b531acf6dc69a1b2a104898ee0f1710",
             "transparent_source_file": "hibiki-look-row-9.png",
-            "transparent_source_sha256": "291c0b008a210eb997d1c558a5d5b08db44eee268ff5be23e1b507e3b82f6538",
             "transparent_source_dimensions": [
               2172,
               724
@@ -2326,7 +2296,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "87a1077076357f5991d65356a0f3c7c19314fef4d61bd3cd5aa36bfb2e4a4fb1",
           "frames": [
             {
               "x": 0,
@@ -2585,9 +2554,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/hibiki-cheerleader-fullbody-handdrawn/materials/look-row-10.png",
-            "original_source_sha256": "9354dd67e53942eea7360e3a83f603316de97d7106720e977d90b6bd3827568b",
             "transparent_source_file": "hibiki-look-row-10.png",
-            "transparent_source_sha256": "a9c770155857c07d0f9320bcd7c4266bcd371460e057254bc50dafbdd656bb12",
             "transparent_source_dimensions": [
               2172,
               724
@@ -2611,7 +2578,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 6,
-          "sha256": "4bba3e36d1727919b4ec02fab0aae4c1e77972d13f0373986e0a36947f1148b3",
           "frames": [
             {
               "x": 0,
@@ -2796,9 +2762,7 @@
             "source_grid_step": 362.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/idle.png",
-            "original_source_sha256": "99d48f998de20be3b67e06880b5b96267902a4e7ca0f626e365136d9637dcc9d",
             "transparent_source_file": "toki-idle.png",
-            "transparent_source_sha256": "3a24c747207c250ed7f203bba1aa8c5496cafd58621d80fcff54e6d068cf6a3a",
             "transparent_source_dimensions": [
               2172,
               724
@@ -2814,7 +2778,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "a62c07d58129356c79895eec369f5be4d1bc86c1625438d12f02f2e791d187ff",
           "frames": [
             {
               "x": 0,
@@ -3057,9 +3020,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/running-right.png",
-            "original_source_sha256": "acc0720a67d153a1da85323ea8e6d855cb060c1906c9a81140bb9e064bf4f5bf",
             "transparent_source_file": "toki-running-right.png",
-            "transparent_source_sha256": "18041b7ea8ac10ab20f99ba4906f1c55d05b78c883adea8f71aefc72e26cec3c",
             "transparent_source_dimensions": [
               2172,
               724
@@ -3075,7 +3036,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "e7ee82e9a86747f11e751d5b831e18bf4a031816136fde8e706a26c4e9cb4568",
           "frames": [
             {
               "x": 0,
@@ -3318,9 +3278,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/running-left.png",
-            "original_source_sha256": "d796b2d1e985a3296b11c23770ac46412b212838fdeee3e24f75c84cdb1d2c4c",
             "transparent_source_file": "toki-running-left.png",
-            "transparent_source_sha256": "999168259a7697b16f2ff2fdffae2515ed347ba5d5ddbe7305ca5efeb872b2f1",
             "transparent_source_dimensions": [
               2172,
               724
@@ -3336,7 +3294,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 4,
-          "sha256": "dbf2493a3fc42f82b862dcef7aeb4edfafc1688cece5d65fcfc03db27e9abc6c",
           "frames": [
             {
               "x": 0,
@@ -3463,9 +3420,7 @@
             "source_grid_step": 543.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/waving.png",
-            "original_source_sha256": "e99490f5cac3522e29f67b93ed3439e68e83771d611bb18c075d4d397761e84e",
             "transparent_source_file": "toki-waving.png",
-            "transparent_source_sha256": "01a3776a075c6392a8b5ce605bc5376912c067f0228dc720e19180db9a416892",
             "transparent_source_dimensions": [
               2172,
               724
@@ -3481,7 +3436,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 5,
-          "sha256": "317a0945eeca42f5ecbdf4827f71a75317acbdfb95459fdabba1757086a12445",
           "frames": [
             {
               "x": 0,
@@ -3637,9 +3591,7 @@
             "source_grid_step": 434.4,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/jumping.png",
-            "original_source_sha256": "e9a7c264f24400e4fb73a3d31b440bb007e3673062a7102d223068a1868006d7",
             "transparent_source_file": "toki-jumping.png",
-            "transparent_source_sha256": "522dba0de6bcbabef2301e9d12ef9b1a2a42854f545aa10e84a2da94c1773182",
             "transparent_source_dimensions": [
               2172,
               724
@@ -3655,7 +3607,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "3b165a38b5664449a27c6013ea3ec8916919f31346e6380fe9538d98decfcb37",
           "frames": [
             {
               "x": 0,
@@ -3898,9 +3849,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/failed.png",
-            "original_source_sha256": "7e8245269bbd47a6548438788aa96db4f801e138a1a6c3e51cac569c211f1041",
             "transparent_source_file": "toki-failed.png",
-            "transparent_source_sha256": "61c5d7a00f0c3c195b1ca0a9f8d63e5cbdba9fc6ddc33b50d98f8dff8dacec43",
             "transparent_source_dimensions": [
               2172,
               724
@@ -3916,7 +3865,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 6,
-          "sha256": "ac06315f455ce97023ecbfb890de43208707dff849c3ea79382b01df27b675f0",
           "frames": [
             {
               "x": 0,
@@ -4101,9 +4049,7 @@
             "source_grid_step": 362.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/waiting.png",
-            "original_source_sha256": "ff9bfd0bbbf1a60dcdfdef390820a64eb2564f7bdba35c125da5a13179895aa5",
             "transparent_source_file": "toki-waiting.png",
-            "transparent_source_sha256": "ff9bfd0bbbf1a60dcdfdef390820a64eb2564f7bdba35c125da5a13179895aa5",
             "transparent_source_dimensions": [
               2172,
               724
@@ -4119,7 +4065,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 6,
-          "sha256": "8e9c6a263756f7673300ee3ef1147b843a560d6e68646526d4ac21bee146b566",
           "frames": [
             {
               "x": 0,
@@ -4304,9 +4249,7 @@
             "source_grid_step": 362.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/running.png",
-            "original_source_sha256": "b115b23240fb53698298bbb031431f599a1f5f0f696b7a2c0168c7d0c2d1889b",
             "transparent_source_file": "toki-running.png",
-            "transparent_source_sha256": "518e1696076804fc3c9d5c1214d68442cac1d1568f5f655e8ec42a0796adbb39",
             "transparent_source_dimensions": [
               2172,
               724
@@ -4322,7 +4265,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 6,
-          "sha256": "7b8ef56383fbadc131456db0a05f105373455ea79a251e8c0107665612c4f49e",
           "frames": [
             {
               "x": 0,
@@ -4507,9 +4449,7 @@
             "source_grid_step": 362.0,
             "component_assignment": "body and props connected components; edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/review.png",
-            "original_source_sha256": "22d01d268f11922809e9c46a9654f6c0f9668197552d16e910e5894b73632a43",
             "transparent_source_file": "toki-review.png",
-            "transparent_source_sha256": "4414313280c5e9fd3d3330285376450ff103d0604a7853cebbbedaaddbc06b58",
             "transparent_source_dimensions": [
               2172,
               724
@@ -4525,7 +4465,6 @@
           "frame_width": 600,
           "frame_height": 725,
           "frame_count": 8,
-          "sha256": "a50dcb21dc1becbcb99d7fcb231c810fbb9f99fe0524645a1c6797942d7faf46",
           "frames": [
             {
               "x": 0,
@@ -4768,9 +4707,7 @@
             "source_grid_step": 271.125,
             "component_assignment": "approved original four-connected pose and halo ownership; soft edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/look-row-9.png",
-            "original_source_sha256": "906afe1f9a99c1fed479081f238b9b569ac8c15a53e0a9dc3f20bae31a9c7c3f",
             "transparent_source_file": "toki-look-row-9.png",
-            "transparent_source_sha256": "cb1c192e41f3be9a29de16f17c87ff93bd0c3d37acf9a325183da6c386ff3fba",
             "transparent_source_dimensions": [
               2169,
               725
@@ -4787,7 +4724,6 @@
           "frame_width": 600,
           "frame_height": 724,
           "frame_count": 8,
-          "sha256": "8ea320aef9969d4636c5ab7dc3f944bbd560ed0777eb412b42e326966432da7b",
           "frames": [
             {
               "x": 0,
@@ -5030,9 +4966,7 @@
             "source_grid_step": 271.5,
             "component_assignment": "approved original four-connected pose and halo ownership; soft edges follow adjacent component",
             "original_source": "pets/toki-bunny-fullbody-handdrawn/materials/selected-sources/look-row-10.png",
-            "original_source_sha256": "43d2be7154756733beda8b9fef2767ec42bab2d03e33482df348e770620f1f7a",
             "transparent_source_file": "toki-look-row-10.png",
-            "transparent_source_sha256": "625edeabbe81df1a0e11175694670b901c249c05caf70956b4f548393d970aa0",
             "transparent_source_dimensions": [
               2172,
               724

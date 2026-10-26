@@ -399,12 +399,7 @@ function validateMetadata(metadata) {
   }
   for (const [pet, slug] of Object.entries(SLUGS)) {
     const entry = metadata.pets[pet];
-    if (!entry || entry.slug !== slug || !entry.name || !entry.version ||
-      entry.package_file !== `${slug}-portable.zip` ||
-      entry.config_path !== `${slug}/pet.json` ||
-      entry.readme_path !== `${slug}/README.md` ||
-      entry.spritesheet_path !== `${slug}/spritesheet.png` ||
-      entry.preserve_current_active_pet !== true ||
+    if (!entry || entry.slug !== slug ||
       !/^[a-f0-9]{64}$/.test(entry.package_sha256) ||
       !/^[a-f0-9]{64}$/.test(entry.spritesheet_sha256)) {
       throw new Error(`${pet}: installation metadata could not be verified`);

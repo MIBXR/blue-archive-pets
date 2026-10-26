@@ -57,6 +57,6 @@ python -m http.server 4177
 
 ## 验证记录
 
-浏览器验证覆盖桌面和 320/390/760/1024/1440 像素宽度，九动作、十六方向、独立播放、暂停/继续、减少动态效果、剪贴板成功与拒绝、安装信息缺失、无 JavaScript、资源失败回退、子目录路径以及实际下载文件的 SHA-256。页面截图见 `assets/previews/`。
+页面截图见 `assets/previews/`。
 
 [查看时的高清转椅介绍实机截图](assets/previews/toki-chair.png)。
