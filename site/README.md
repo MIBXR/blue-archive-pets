@@ -2,9 +2,9 @@
 
 收藏入口连到两个独立角色页面：响是奶油白、蓝色和黄色的运动会应援手册；时是深蓝、青色的 C&C 任务档案。布局、文案与动作用各自的角色特点组织。
 
-- [收藏入口](https://blue-archive-desktop-companions.mibxranime.chatgpt.site/)
-- [响的应援手册](https://blue-archive-desktop-companions.mibxranime.chatgpt.site/hibiki.html)
-- [时的任务档案](https://blue-archive-desktop-companions.mibxranime.chatgpt.site/toki.html)
+- [收藏入口](https://blue-archive-pets.mibxranime.chatgpt.site/)
+- [响的应援手册](https://blue-archive-pets.mibxranime.chatgpt.site/hibiki.html)
+- [时的任务档案](https://blue-archive-pets.mibxranime.chatgpt.site/toki.html)
 
 使用 Sites 托管；当前可公开访问。网站源码保存在本目录，GitHub 用于保存作品资料与便携包。无需框架或构建步骤。
 
