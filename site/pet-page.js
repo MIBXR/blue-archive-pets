@@ -107,7 +107,7 @@ let copyRequest=0;
 let metadata;
 loadInstallMetadata({baseUrl:document.baseURI}).then(value=>{metadata=value;updateInstruction();return value;}).catch(error=>{textarea.value='安装信息暂时无法加载。你仍可以直接下载 ZIP，解压后阅读包内 README.md。';return null;});
 function updateInstruction(){if(metadata)textarea.value=createInstallInstruction(metadata,pet,{activate:activate.checked,baseUrl:document.baseURI});}
-activate.addEventListener('change',()=>{++copyRequest;updateInstruction();feedback.textContent=activate.checked?'安装指令将请求导入后启用这只桌宠。':'安装指令将保留当前启用的桌宠。';});
+activate.addEventListener('change',()=>{++copyRequest;updateInstruction();feedback.textContent=activate.checked?'安装指令会要求导入后启用这只桌宠。':'安装指令会要求保留当前启用的桌宠。';});
 details.addEventListener('toggle',()=>{if(details.open)updateInstruction();});
 copyButton.addEventListener('click',async()=>{
   const request=++copyRequest;const shouldActivate=activate.checked;
@@ -117,10 +117,10 @@ copyButton.addEventListener('click',async()=>{
     if(request!==copyRequest){feedback.textContent='安装选项已改变，请重新复制。';return;}
     if(!result.text)throw result.error??new Error('安装信息无法加载');
     textarea.value=result.text;
-    if(result.copied){feedback.textContent='已复制，交给 Agent 完成导入。';if(!paused)void install.respond('waving');}
-    else{feedback.textContent='浏览器未能复制。请从下方选中指令，手动复制。';details.open=true;textarea.focus();textarea.select();}
+    if(result.copied){feedback.textContent='安装指令已复制，请交给 Agent 完成导入。';if(!paused)void install.respond('waving');}
+    else{feedback.textContent='浏览器未能复制。请选中下方指令，手动复制。';details.open=true;textarea.focus();textarea.select();}
   }catch(error){
-    if(request===copyRequest){feedback.textContent='安装指令暂时无法准备。你仍可以直接下载 ZIP。';details.open=true;}
+    if(request===copyRequest){feedback.textContent='暂时无法生成安装指令。你仍可以直接下载 ZIP。';details.open=true;}
   }finally{copyButton.disabled=false;}
 });
 

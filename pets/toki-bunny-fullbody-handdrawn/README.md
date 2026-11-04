@@ -10,7 +10,7 @@
 
 <p align="center"><img src="package/previews/states/idle.png" width="192" alt="兔女郎时待机"><img src="package/previews/states/waving.png" width="192" alt="兔女郎时双手比 V"></p>
 
-浅金长发、蓝紫色椭圆眼睛、深蓝兔女郎装与分段光环，收进小小的全身轮廓里。她双手交叉提着千禧标志公文箱，工作时认真接收耳麦信息；放松下来，也会模仿兔爪摇晃，或者坐上转椅陪你工作。
+浅金长发、蓝紫色椭圆眼睛、深蓝兔女郎装与分段光环，收进小小的全身轮廓里。她双手交叉提着带有千禧标志的公文箱，工作时通过耳麦认真接收信息；放松下来，也会模仿兔爪摇晃，或者坐上转椅陪你工作。
 
 ## 她的模样
 
@@ -36,7 +36,7 @@
 <td align="center" width="33%"><b>06 · 失落</b><br><a href="package/previews/states/failed.png"><img src="package/previews/states/failed.png" width="192" alt="兔女郎时：失落动作预览"></a><br><sub>垂下眼睛、弯起一只兔耳，轻轻叹气后恢复站姿。</sub></td>
 </tr>
 <tr>
-<td align="center" width="33%"><b>07 · 等待回应</b><br><a href="package/previews/states/waiting.png"><img src="package/previews/states/waiting.png" width="192" alt="兔女郎时：等待回应动作预览"></a><br><sub>一手提箱，一手询问，停下来等你的回应。</sub></td>
+<td align="center" width="33%"><b>07 · 等待回应</b><br><a href="package/previews/states/waiting.png"><img src="package/previews/states/waiting.png" width="192" alt="兔女郎时：等待回应动作预览"></a><br><sub>一手提箱，一手做出询问手势，停下来等你的回应。</sub></td>
 <td align="center" width="33%"><b>08 · 接收信息 · 工作状态</b><br><a href="package/previews/states/running.png"><img src="package/previews/states/running.png" width="192" alt="兔女郎时：接收信息 · 工作状态动作预览"></a><br><sub>轻触左耳麦、接收信息，再整理手中的武器。</sub></td>
 <td align="center" width="33%"><b>09 · 检查结果</b><br><a href="package/previews/states/review.png"><img src="package/previews/states/review.png" width="192" alt="兔女郎时：检查结果动作预览"></a><br><sub>认真查看，露出确认完成的神情。</sub></td>
 </tr>

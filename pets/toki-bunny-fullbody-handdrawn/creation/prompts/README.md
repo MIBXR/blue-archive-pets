@@ -1,6 +1,6 @@
 # 制作时保留的提示词
 
-这里逐字节保留 v1.0 源制作目录中的 80 份提示词文件，包含初始模板、逐状态方案、重试与修订文本。目录名称沿用原资料，便于继续沿着某个动作修改。
+这里逐字节保留 v1.0 源制作目录中的 80 份提示词文件，包含初始模板、逐状态方案、重试与修订文本。目录名称沿用原资料，便于继续修改对应动作。
 
 这些是真实保存的提示词文本，但源任务表仍包含 `pending` 状态；本目录不据此宣称所有文本都曾被成功执行，也不补造调用时间。当前采用的源图以[高清素材索引](../../materials/README.md)和最终成品为准。
 
@@ -17,7 +17,7 @@
 | [waving.png](../../materials/selected-sources/waving.png) | [双 V 问候修订](rows/waving-clone-repair-01.md) | 四格完整姿势，与双 V、星星和返回待机相对应。 |
 | [jumping.png](../../materials/selected-sources/jumping.png) | [单姿势身份修复](rows/jumping-one-pose-identity-repair-07.md) | 修复中间俯身姿势，随后与保留姿势组成五格条带。 |
 | [failed.png](../../materials/selected-sources/failed.png) | [基准上的轻微失落反应](failed-canonical-minimal-reaction.txt) | 原记录重新采用基准完整站姿，替代腿偏长的早期候选。 |
-| [waiting.png](../../materials/selected-sources/waiting.png) | [等待第三家族](revision/waiting-03.txt) | 最终另以 `[0,1,1,1,0,5]` 选帧；提示词中的所有原始动作并未全部出现在成品中。 |
+| [waiting.png](../../materials/selected-sources/waiting.png) | [等待第三家族](revision/waiting-03.txt) | 最终另以 `[0,1,1,1,0,5]` 选帧；提示词中的原始动作未全部出现在成品中。 |
 | [running.png](../../materials/selected-sources/running.png) | [仅修正箱标](running-emblem-only-edit.txt) | 工作组合动作沿用已有源图，仅改箱标。 |
 | [review.png](../../materials/selected-sources/review.png) | [审阅动作修订](rows/review-clone-repair-01.md) | 对应六格查看与确认姿势。 |
 | [转椅跟随成品](../../package/previews/chair-follow.gif) | [注视主方向](look-cardinals.md)、[第 9 行](rows/look-row-9.md)、[第 10 行](rows/look-row-10.md) | 这些文本存在于材料中；最终十六格沿用先前确认的图集，不声称本轮重新执行了这些文本。 |

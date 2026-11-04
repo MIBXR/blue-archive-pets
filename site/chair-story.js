@@ -67,7 +67,7 @@ function initializeChairStory(card) {
     if (motionQuery.matches) feedback.textContent = '已减少动态效果，用「下一方向」慢慢看看她。';
     else if (isPaused()) feedback.textContent = '自动转动已暂停，也可以逐个方向静静欣赏。';
     else if (wasSpinning && document.hidden) feedback.textContent = '转动已停在刚才的方向。';
-    else if (!spinning) feedback.textContent = '点「转一圈」，看看她坐着椅子转回来。';
+    else if (!spinning) feedback.textContent = '点「转一圈」，看看她坐在椅子上转回来。';
   }
 
   spinButton.addEventListener('click', () => {
