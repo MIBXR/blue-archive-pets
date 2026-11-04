@@ -2,7 +2,7 @@
 
 此目录是可携带的 sprite v2 成品，供支持该格式的 Agent、Petdex Desktop 或兼容桌宠应用使用。安装图集为 `spritesheet.png`，名称、描述、图集哈希与布局记录在 `pet.json`。
 
-v1.0 便携 ZIP 只包含一个顶层目录 `toki-bunny-fullbody-handdrawn/`，保持原发布字节，包含正式图集、元数据、说明与历史版预览。当前仓库的 `package/previews/` 已单独改善为透明预览，因此预览与说明不再和历史 ZIP 逐字节对应；安装用 `spritesheet.png` 与 `pet.json` 保持原样。
+v1.0 便携 ZIP 只包含一个顶层目录 `toki-bunny-fullbody-handdrawn/`，保持原发布字节，包含正式图集、元数据、说明与历史版预览。当前仓库的 `package/previews/` 已单独更新为透明预览，因此预览与说明不再和历史 ZIP 逐字节对应；安装用 `spritesheet.png` 与 `pet.json` 保持原样。
 
 ## 安装
 
@@ -41,6 +41,6 @@ v1.0 便携 ZIP 只包含一个顶层目录 `toki-bunny-fullbody-handdrawn/`，�
 - 文件 SHA-256：`f5017eb5170348875f138c8c111697cda27199cc1e73a295e66e4781730db10f`。
 - 解码 RGBA SHA-256：`e57901beb4815cae879db41f9731c4657c555ad81e492c2a67786d4eb7bcc406`。
 
-这次透明预览改善只重新导出了仓库内的 GIF、APNG 和静帧，正式图集、`pet.json`、历史 MP4 与 v1.0 Release ZIP 的原始字节均未改变。交付元数据在此前归档时已移除原环境 ID、历史更新和启用状态，并增加作品版本字段，避免把源账号状态误当成新环境的安装结果。
+这次透明预览更新只重新导出了仓库内的 GIF、APNG 和静帧，正式图集、`pet.json`、历史 MP4 与 v1.0 Release ZIP 的原始字节均未改变。交付元数据在此前归档时已移除原环境 ID、历史更新和启用状态，并增加作品版本字段，避免把源账号状态误当成新环境的安装结果。
 
 角色来自《碧蓝档案 / Blue Archive》；手绘风格参考为用户确认的 [JAZZ JACK（@JAZZ_JACK_）](https://x.com/JAZZ_JACK_)。桌宠由 AI 辅助生成与后续整理制作，角色和参考作品的权利归相应权利人。完整来源与高清原稿见[作品页面](https://github.com/MIBXR/blue-archive-pets/tree/main/pets/toki-bunny-fullbody-handdrawn)。

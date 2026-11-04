@@ -11,7 +11,7 @@ python site/tools/prepare-hd.py
 ## 透明背景
 
 - 响的 `materials/main.png` 与时的 `selected-sources/waiting.png` 已含有效 alpha，逐字节复制并保留其现有透明度。
-- 时的高清主图来自选定的绿底 `selected-sources/base.png`。九动作使用各自选定的原尺寸源条；响另含两个高清注视源条。
+- 时的高清主图来自选定的绿底 `selected-sources/base.png`。九种动作使用各自选定的原尺寸源条；响另含两个高清注视源条。
 - 对不透明绿底或洋红底，先根据背景色差识别背景；只有背景附近的三像素边缘带可以取得部分 alpha，再反算该像素混入的背景颜色。远离背景的白色、发色、cyan 饰件和衣服内部不参与去色，不使用侵蚀删除轮廓。
 - 背景孔洞与外部背景采用同样的色差规则，因此分段光环间隙也透明。保存的 PNG 仍保持源图尺寸。
 

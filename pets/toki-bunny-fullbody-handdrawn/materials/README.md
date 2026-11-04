@@ -1,6 +1,6 @@
 # 高清原稿与关键素材
 
-本目录保存 v1.0 中采用的源图、原尺寸生成文件和有助于继续修改的关键素材，均沿用提供文件的原始字节。图集以 [package/spritesheet.png](../package/spritesheet.png) 为准；高清图包含绿底、布局或未采用候选，不能直接用作安装文件。
+本目录保存 v1.0 中采用的源图、原尺寸生成文件和有助于继续修改的关键素材，均按提供文件的原始字节保存。图集以 [package/spritesheet.png](../package/spritesheet.png) 为准；高清图包含绿底图、布局图或未采用的候选图，不能直接用作安装文件。
 
 ## 当前采用的源图
 
@@ -25,7 +25,7 @@
 
 ## 主视觉与整体设计图
 
-这两张图片由用户本次提供的目录单独附带，用于展示和设计参考。它们与最终 192×208 单格图集的用途不同；文件本身未附带独立生成调用记录，不补写生成过程。
+用户本次提供的目录中另附了这两张图片，用于展示和设计参考。它们与最终 192×208 单格图集的用途不同；文件本身未附带独立生成调用记录，不补写生成过程。
 
 | 文件 | 原始尺寸 |
 | --- | --- |
@@ -88,6 +88,6 @@
 - [waiting-03-derived-original.png](../materials/key-sources/waiting-03-derived-original.png)
 - [10-canonical-short-hands-correct-halo-missing.png](../materials/generation-originals/exec-565c1194-f5c6-4078-a693-c08360cf5e59.png)
 
-转椅的独立高清条带最初未包含在本次提供的材料中。2026-10-07，从本机旧制作工作区的 `toki-final/run/decoded/` 恢复了原先选中的 `look-row-9.png` 和 `look-row-10.png`，按原始字节保存到选中源图。两张原稿的哈希与原制作选择记录一致；它们生成的十六格经 `toki-base-aligned` 继承后，与[正式图集](../package/spritesheet.png)的转椅两行完整 RGBA 逐字节相同。原尺寸、SHA-256、真实组件归属与继承链见[来源记录](../materials/selected-sources/look-source-provenance.json)。网站使用原稿透明化与空间注册后的展示素材，没有新绘角色或放大成品冒充高清。
+转椅的独立高清条带最初未包含在本次提供的材料中。2026-10-07，从本机旧制作工作区的 `toki-final/run/decoded/` 恢复了原先选中的 `look-row-9.png` 和 `look-row-10.png`，按原始字节保存到选中源图。两张原稿的哈希与原制作选择记录一致；它们生成的十六格经 `toki-base-aligned` 继承后，与[正式图集](../package/spritesheet.png)的转椅两行完整 RGBA 逐字节相同。原尺寸、SHA-256、真实组件归属与继承链见[来源记录](../materials/selected-sources/look-source-provenance.json)。网站使用原稿透明化与空间注册后的展示素材，未重新绘制角色，也未将成品放大后作为高清原稿。
 
 [查看创作记录](../creation/README.md) · [返回作品介绍](../README.md)
