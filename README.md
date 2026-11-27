@@ -10,11 +10,20 @@
 
 ## 宣传网站
 
-[打开收藏入口](https://blue-archive-pets.mibxranime.chatgpt.site/) · [响的应援手册](https://blue-archive-pets.mibxranime.chatgpt.site/hibiki.html) · [时的任务档案](https://blue-archive-pets.mibxranime.chatgpt.site/toki.html)
+[打开千禧年桌宠图鉴](https://blue-archive-pets.mibxranime.chatgpt.site/) · [白昼 · 猫冢响](https://blue-archive-pets.mibxranime.chatgpt.site/?pet=hibiki) · [黑夜 · 飞鸟马时](https://blue-archive-pets.mibxranime.chatgpt.site/?pet=toki)
 
-网站使用 Sites 托管，当前可公开访问。两位角色各有独立页面、背景故事、透明高清主视觉、九种动作与十六方向互动，以及可查看的 Agent 安装指令和直接下载入口。人物、卡片和斜按钮会随鼠标轻微浮动；时的介绍章节还可直接体验转椅。[网站源码与运行说明](site/README.md)。
+网站使用 Sites 托管，当前可公开访问。全站采用 **昼夜双生四幕满屏剧场**（角色舞台 / 学生手记 / MomoTalk / 桌面领回），支持单刀斜切昼夜切换、5 首官方原声 BGM 切歌、指针轻避让星尘点阵、响的六拍应援节拍轨与时的 360° 转椅锁定「白垩之预告状」、第 2 幕工程红线规格透视、第 3 幕 MomoTalk 羁绊隐藏附言、第 4 幕小桌宠拖入 Agent 一键安装，以及斜切双栏快速下载终端。旧链接 `hibiki.html` 与 `toki.html` 自动跳转至对应角色模式。[网站源码与运行说明](site/README.md)。
 
-<p align="center"><img src="site/assets/previews/collection-desktop.png" width="900" alt="响与时的宣传网站收藏入口：浅蓝应援手册和深蓝任务档案"></p>
+<table>
+<tr>
+<td align="center" width="50%"><b>白昼 · 猫冢响（角色舞台）</b><br><img src="site/assets/previews/hibiki-desktop.png" width="440" alt="白昼模式：猫冢响角色舞台、六拍应援轨与斜切主视觉"></td>
+<td align="center" width="50%"><b>黑夜 · 飞鸟马时（角色舞台）</b><br><img src="site/assets/previews/toki-desktop.png" width="440" alt="黑夜模式：飞鸟马时角色舞台、深蓝星空斜切卡与 360° 锁定环"></td>
+</tr>
+<tr>
+<td align="center" width="50%"><b>学生手记 · 工程红线规格透视</b><br><img src="site/assets/previews/hibiki-motion.png" width="440" alt="第 2 幕学生手记：工程红线规格透视与像素基准线标注"></td>
+<td align="center" width="50%"><b>桌面领回 · 便携包与 Agent 安装台</b><br><img src="site/assets/previews/deploy-desktop.png" width="440" alt="第 4 幕桌面领回：双便携包、完整 SHA-256 与可拖入式 Agent 安装台"></td>
+</tr>
+</table>
 
 ## 认识她们
 

@@ -1,92 +1,372 @@
 <!doctype html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="《蔚蓝档案》猫冢响（拉拉队服）与飞鸟马时（兔女郎）全身手绘桌宠。支持在线预览动作与方向，提供便携包下载与 Agent 导入。">
-    <title>响与时 · 蔚蓝档案手绘桌宠</title>
-    <link rel="stylesheet" href="collection.css?v=3">
-
-    <link rel="icon" type="image/x-icon" sizes="16x16 32x32 48x48" href="favicon.ico?v=3">
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/collection-32.png?v=3">
-    <link rel="apple-touch-icon" type="image/png" sizes="180x180" href="assets/icons/collection-180.png?v=3">
-    <link rel="stylesheet" href="page-effects.css?v=3">
-    <script type="module" src="page-effects.js?v=4"></script></head>
-  <body class="collection-page">
-    <a class="collection-skip" href="#collection">跳到桌宠列表</a>
-    <div class="collection-shell">
-      <header class="collection-header">
-        <a class="collection-brand" href="index.html" aria-label="Blue Archive 桌宠首页">
-          <svg class="collection-brand-mark" viewBox="0 0 135 90" aria-hidden="true"><path d="M0 0h77.56L25.51 90l-14.23-17.79 27.57-49.58H17.82Z" fill="currentColor"/><path d="M88.85 0H135v22.63L97.18 90 82.95 72.86l28.46-50.88H100.38L60.77 89.48 47.05 72.21Z" fill="currentColor"/></svg>
-          <span><strong>BLUE ARCHIVE</strong><span>同人手绘桌宠</span></span>
-        </a>
-        <a class="collection-repo-link" href="https://github.com/MIBXR/blue-archive-pets">作品仓库 <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></span></a>
-      </header>
-
-      <main>
-        <section class="collection-intro" aria-labelledby="collection-title">
-          <div>
-            <p class="collection-eyebrow">千禧年科技学院 · 两位角色</p>
-            <h1 id="collection-title">运动场的场边应援<br>与特工的静候待命</h1>
+<html lang="zh-CN" data-mode="hibiki">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f5f8fc">
+  <title data-copy="pageTitle">Blue Archive Pets</title>
+  <link rel="modulepreload" href="./copy-data.js">
+  <link rel="modulepreload" href="./pet-runtime.js">
+  <link rel="icon" href="./favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/collection-32.png">
+  <link rel="apple-touch-icon" href="./assets/icons/collection-180.png">
+  <script>(()=>{const q=new URLSearchParams(location.search);if(q.get('skip')==='1')document.documentElement.dataset.skip='1';const p=(q.get('pet')||q.get('mode')||'').toLowerCase();if(p==='toki'||p==='hibiki'){document.documentElement.dataset.mode=p;if(p==='toki'){const m=document.querySelector('meta[name="theme-color"]');if(m)m.content='#151618';}}})();</script>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" blocking="render" src="./app.js"></script>
+</head>
+<body>
+  <svg xmlns="http://www.w3.org/2000/svg" class="symbols" aria-hidden="true">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.5 1.5m11.2 11.2 1.5 1.5M4.9 19.1l1.5-1.5M17.6 6.4l1.5-1.5"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.8 14A8.9 8.9 0 0 1 10 3.2 9 9 0 1 0 20.8 14Z"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v11m-4-4 4 4 4-4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"/></symbol>
+    <symbol id="i-wave" viewBox="0 0 24 24"><path d="M3 10v4m4-8v12m5-16v20m5-16v12m4-8v4"/></symbol>
+    <symbol id="i-track" viewBox="0 0 24 24"><circle cx="12" cy="12" r="7.4"/><circle cx="12" cy="12" r="2.2"/><path d="M12 1.5v4m0 13v4m-10.5-10.5h4m13 0h4"/></symbol>
+    <symbol id="i-spin" viewBox="0 0 24 24"><path d="M20 10a8 8 0 1 0-.7 6M20 4v6h-6"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+    <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v15m-6-6 6 6 6-6"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path d="M6 18 18 6M7 6h11v11"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7l-6 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/><path d="M7 9h10m-10 4h6"/></symbol>
+    <symbol id="i-hand" viewBox="0 0 24 24"><path d="M8 12V5a1.6 1.6 0 0 1 3.2 0v7-2.4a1.6 1.6 0 0 1 3.2 0v2.1-1a1.6 1.6 0 0 1 3.2 0v1a1.6 1.6 0 0 1 3.2 0v3.9c0 3.7-2.1 5.8-5.6 5.8h-1.6c-2 0-3.4-.9-4.6-2.3l-5.1-6a1.6 1.6 0 0 1 2.3-2.2L8 12.6Z"/></symbol>
+    <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5v14m8-14v14" stroke-width="3"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 4 12 8-12 8Z"/></symbol>
+    <symbol id="i-envelope" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m4.5 12 5 5 10-10"/></symbol>
+    <symbol id="i-archive" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM14 3v5h5M9 3v2m2 0v2M9 7v2m2 0v2"/><rect x="8" y="12" width="4" height="5" rx="1"/></symbol>
+    <symbol id="i-terminal" viewBox="0 0 24 24"><rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="m6.5 9 3 3-3 3m6 0h4"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h14v16H6a2 2 0 0 1-2-2V6a2 2 0 0 1 1-2Zm-1 13a2 2 0 0 1 2-2h13M8 4v11"/></symbol>
+    <symbol id="i-ruler" viewBox="0 0 24 24"><path d="M3 16 16 3l5 5-13 13H3v-5Zm5-5 2 2m2-6 2 2m-8 8 2 2"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.5s-7.5-4.7-9.4-9C1.1 8 3.2 4.5 6.8 4.5c2.1 0 3.7 1.1 5.2 2.8 1.5-1.7 3.1-2.8 5.2-2.8 3.6 0 5.7 3.5 4.2 7-1.9 4.3-9.4 9-9.4 9Z"/></symbol>
+    <symbol id="i-vol-on" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M18.5 5.5a9 9 0 0 1 0 13"/></symbol>
+    <symbol id="i-vol-off" viewBox="0 0 24 24"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="m16 9 5 6m0-6-5 6"/></symbol>
+  </svg>
+  <canvas class="ambient-field" id="ambientField" aria-hidden="true"></canvas>
+  <header class="header">
+    <div class="shell header-inner">
+      <div class="brand" data-aria="brand">
+        <img class="brand-sch" src="./assets/official/millennium-wiki.png" data-alt="millennium" alt="">
+        <i></i><img class="brand-ba" src="./assets/official/ba-logo-en.svg" data-alt="archive" alt="">
+      </div>
+      <nav class="modes" data-aria="characterMode">
+        <button class="mode" data-pet="hibiki" aria-pressed="true"><span><svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg><b class="mode-full" data-copy="dayMode"></b><b class="mode-short" aria-hidden="true">响</b></span></button>
+        <button class="mode" data-pet="toki" aria-pressed="false"><span><svg class="ico" aria-hidden="true"><use href="#i-moon"/></svg><b class="mode-full" data-copy="nightMode"></b><b class="mode-short" aria-hidden="true">时</b></span></button>
+      </nav>
+      <div class="header-tools">
+        <div class="sound-tools">
+          <div class="sound-pill">
+            <button class="music" id="music" aria-pressed="false"><span class="btn-face"><svg class="ico" aria-hidden="true"><use href="#i-play"/></svg><span data-copy="bgm"></span></span></button>
+            <button class="track-picker" id="trackPicker" aria-haspopup="listbox" aria-expanded="false" aria-controls="trackList"><span class="btn-face"><span id="trackTitle"></span><svg class="ico" aria-hidden="true"><use href="#i-chevron"/></svg></span></button>
           </div>
-          <div class="collection-intro-note">
-            <span class="collection-count" aria-hidden="true">02</span>
-            <p>两款《蔚蓝档案》全身手绘桌宠，<br>可以在任务栏旁陪你写代码、敲文档。</p>
-            <span class="collection-intro-caption">9 组日常动作 · 16 方向视线与转椅</span>
+          <div class="track-popover" id="trackPopover" inert>
+            <div class="track-head"><svg class="ico" aria-hidden="true"><use href="#i-wave"/></svg><strong data-copy="chooseTrack"></strong><span id="trackCounter"></span></div>
+            <div id="trackList" role="listbox" data-aria="chooseTrack"></div>
           </div>
-        </section>
-
-        <section id="collection" class="collection-grid" aria-label="两只桌宠">
-          <article class="collection-card collection-card-hibiki" aria-labelledby="hibiki-title">
-            <div class="collection-art collection-art-hibiki">
-              <div class="collection-card-top"><span>01 · 工程部</span><span class="collection-version">v1.1</span></div>
-              <span class="collection-art-word" aria-hidden="true">CHEER!</span>
-              <span class="collection-star collection-star-one" aria-hidden="true">✦</span>
-              <span class="collection-star collection-star-two" aria-hidden="true">✧</span>
-              <img class="collection-character collection-character-hibiki" src="assets/hibiki-main.png" alt="猫冢响拉拉队服手绘桌宠，戴着护目镜，手持黄白花球" width="720" height="720" fetchpriority="high">
-              <div class="collection-art-label"><span class="collection-label-line" aria-hidden="true"></span>晄轮大祭 · 应援团</div>
-            </div>
-            <div class="collection-card-content">
-              <p class="collection-pet-name">NEKOZUKA HIBIKI</p>
-              <h2 id="hibiki-title">猫冢响</h2>
-              <p class="collection-outfit">拉拉队服 · 全身手绘</p>
-              <p class="collection-card-description">平时习惯躲在工坊里敲敲打打的响，为了运动会换上了自己改制的应援服。虽然还是不太敢大声喊口号，但手里的花球从来没停下过。</p>
-              <ul class="collection-details" aria-label="响的动作内容"><li><strong>9</strong> 日常动作</li><li><strong>16</strong> 方向注视</li></ul>
-              <a class="collection-cta" href="hibiki.html"><span>查看猫冢响详情与下载</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></span></a>
-            </div>
-          </article>
-
-          <article class="collection-card collection-card-toki" aria-labelledby="toki-title">
-            <div class="collection-art collection-art-toki">
-              <div class="collection-card-top"><span>02 · C&amp;C</span><span class="collection-version">v1.0</span></div>
-              <span class="collection-art-word" aria-hidden="true">STANDBY</span>
-              <span class="collection-crosshair collection-crosshair-one" aria-hidden="true"></span>
-              <span class="collection-crosshair collection-crosshair-two" aria-hidden="true"></span>
-              <img class="collection-character collection-character-toki" src="assets/toki-main.png" alt="飞鸟马时兔女郎手绘桌宠，戴着耳麦，安静提着公文箱" width="720" height="720">
-              <div class="collection-art-label"><span class="collection-status-light" aria-hidden="true"></span>白垩之预告状 · 潜入待命</div>
-            </div>
-            <div class="collection-card-content">
-              <p class="collection-pet-name">ASUMA TOKI</p>
-              <h2 id="toki-title">飞鸟马时</h2>
-              <p class="collection-outfit">兔女郎 · 全身手绘</p>
-              <p class="collection-card-description">提着战术手提箱、随时按着耳麦听候指令的 C&amp;C 特工。脸上总是一副波澜不惊的表情，闲下来却会偷偷比个 V、或者坐上转椅转一圈。</p>
-              <ul class="collection-details" aria-label="时的动作内容"><li><strong>9</strong> 日常动作</li><li><strong>16</strong> 方向转椅</li></ul>
-              <a class="collection-cta" href="toki.html"><span>查看飞鸟马时详情与下载</span><span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></span></a>
-            </div>
-          </article>
-        </section>
-
-        <aside class="collection-archive" aria-label="创作资料">
-          <p><span aria-hidden="true">＋</span> 制作过程中使用的设定参考、生成提示词与分层原稿均已整理在仓库中。</p>
-          <a href="https://github.com/MIBXR/blue-archive-pets/tree/main/pets">查看参考、提示词与原稿 <span aria-hidden="true"><svg class="ui-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg></span></a>
-        </aside>
-      </main>
-
-      <footer class="collection-footer">
-        <p>角色出自 <a href="https://bluearchive.jp/">Blue Archive（蔚蓝档案）</a>，Q 版画风参考 <a href="https://x.com/JAZZ_JACK_">JAZZ_JACK_</a>，由 AI 辅助绘制并手工精修帧序列。</p>
-        <p>同人非商用作品 · 原作角色与参考画作权利归各自权利人所有。</p>
-      </footer>
+        </div>
+        <button class="skew primary" data-open="download"><span><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span data-copy="quickDownload"></span></span></button>
+      </div>
     </div>
-  </body>
+  </header>
+
+  <nav class="chapter-rail" aria-label="章节索引">
+    <div class="rail-current" aria-hidden="true">
+      <div class="rail-count"><span class="roll-window"><b id="railNumber">01</b></span><small>/ 04</small></div>
+      <div class="roll-window rail-heading"><strong id="railTitle">STAGE</strong></div>
+    </div>
+    <div class="rail-links">
+      <a href="#stage" aria-label="01 角色舞台"><span class="nav-number">01</span><span class="nav-en" lang="en">STAGE</span><span class="nav-cn">角色舞台</span></a>
+      <a href="#journal" aria-label="02 学生手记"><span class="nav-number">02</span><span class="nav-en" lang="en">ARCHIVE</span><span class="nav-cn">学生手记</span></a>
+      <a href="#chat" aria-label="03 MomoTalk"><span class="nav-number">03</span><span class="nav-en" lang="en">MOMOTALK</span><span class="nav-cn">MomoTalk</span></a>
+      <a href="#downloads" aria-label="04 桌面领回"><span class="nav-number">04</span><span class="nav-en" lang="en">DEPLOY</span><span class="nav-cn">桌面领回</span></a>
+    </div>
+    <i class="rail-scale" aria-hidden="true"></i>
+  </nav>
+  <main class="theater">
+    <section class="chapter chapter-stage is-current" id="stage-chapter" data-anchor="stage" data-index-title="STAGE" aria-labelledby="name" tabindex="-1">
+      <div class="chapter-bar"><span class="chapter-kicker" lang="en"><b>01</b><i></i>STAGE</span><span class="bar-rule" aria-hidden="true"></span></div>
+      <div class="stage-spread">
+        <div class="profile">
+          <div class="folio"><span class="folio-line"></span><span data-copy="folio"></span><span class="file-number" id="folioNumber"></span></div>
+          <h1 id="name" data-student="name"></h1>
+          <p class="roman" id="roman" lang="en" data-student="roman"></p>
+          <div class="identity"><span id="outfit" data-student="outfit"></span><i></i><span id="club" data-student="club"></span><span class="version" id="version"></span></div>
+          <p class="bio" id="bio" data-student="bio"></p>
+        </div>
+        <figure class="exhibit" id="exhibit">
+          <div class="stage" id="stage" tabindex="0" data-aria="stage">
+            <div class="paper-grid"></div><div class="slab"></div>
+            <div class="draft" aria-hidden="true">
+              <div class="outline" id="outline" data-student="display"></div>
+              <div class="cutline"><i></i><span id="eventEn" data-student="event"></span></div>
+              <img class="watermark" src="./assets/official/millennium-wiki.png" alt="">
+              <svg class="geometry" viewBox="0 0 760 568" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                  <radialGradient id="haloDay" cx=".56" cy=".45" r=".57"><stop stop-color="var(--field-inner)"/><stop offset=".65" stop-color="var(--field-mid)"/><stop offset=".94" stop-color="var(--field-rim)"/><stop offset="1" stop-color="var(--field-rim)" stop-opacity=".3"/></radialGradient>
+                  <linearGradient id="band" x1="0" x2="1" y1=".6" y2=".3"><stop stop-color="var(--orbital)" stop-opacity=".06"/><stop offset=".32" stop-color="var(--orbital)" stop-opacity=".41"/><stop offset=".62" stop-color="var(--orbital)" stop-opacity=".09"/><stop offset="1" stop-color="var(--orbital)" stop-opacity=".5"/></linearGradient>
+                  <path id="spark" d="M0-8C1-2 2-1 8 0 2 1 1 2 0 8-1 2-2 1-8 0-2-1-1-2 0-8Z"/>
+                </defs>
+                <g class="halo" transform="translate(470 201)">
+                  <circle r="146" fill="url(#haloDay)"/>
+                  <g class="circle-lines" fill="none"><circle r="148"/><circle r="137" stroke-dasharray="74 5 8 6 210 45"/><circle r="159" stroke-dasharray="225 85 55 634"/><circle r="166" stroke-dasharray="1 9"/><path d="M-180 0h28m305 0h25M0-177v25m0 299v28"/></g>
+                  <g class="night-lens" fill="none"><circle r="128"/><circle r="117"/><ellipse rx="156" ry="47" transform="rotate(-24)"/></g>
+                </g>
+                <g class="architecture" fill="none"><path d="M0 397h760M89 0v568M0 539 747 49M0 544 747 54"/><path d="M21 24h25m-13-12v25m654 489h36m-18-18v36"/></g>
+                <g id="ribbonBack"></g>
+                <g class="orb-stars"><use href="#spark" x="203" y="138"/><use href="#spark" transform="translate(656 240) scale(1.45)"/><use href="#spark" transform="translate(312 432) scale(.65)"/><use href="#spark" transform="translate(125 279) scale(.7)"/></g>
+              </svg>
+            </div>
+            <div class="figure-layer"><img class="portrait" id="portrait" src="./assets/official/hibiki-cheer-portrait.webp" alt="" fetchpriority="high"></div>
+            <svg class="ribbon-front" viewBox="0 0 760 568" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><g id="ribbonFront"></g></svg>
+            <div class="night-plate" aria-hidden="true">
+              <svg viewBox="0 0 112 61"><path class="plate-grid" d="M0 30.5h112m-56-29v59M0 15h112M0 46h112"/><path id="waveform" d="M0 31h112"/></svg>
+            </div>
+            <div class="orbit-plate" aria-hidden="true"><svg viewBox="0 0 64 64"><g class="polar-grid"><path d="M0 32h64M32 0v64"/><circle cx="32" cy="32" r="24"/></g><path id="polarOrbit"/></svg></div>
+            <div class="specimen-id" id="specimenId" aria-hidden="true">01</div>
+            <div class="pet-dock">
+              <div class="pet-floor" aria-hidden="true"></div>
+              <svg class="toki-lock-ring" id="tokiLockRing" viewBox="0 0 200 200" aria-hidden="true">
+                <circle class="lock-track" cx="100" cy="100" r="88"/>
+                <circle class="lock-ticks" cx="100" cy="100" r="80" pathLength="16" stroke-dasharray=".12 .88"/>
+                <circle class="lock-arc" id="tokiLockArc" cx="100" cy="100" r="88" pathLength="360" stroke-dasharray="360" stroke-dashoffset="360"/>
+                <g class="lock-pointer" id="tokiLockPointer"><path d="M100 4l4.5 9h-9Z"/></g>
+              </svg>
+              <div class="pet-sparks" id="petSparks" aria-hidden="true"></div>
+              <button id="petTouch"><canvas id="petCanvas" width="520" height="520"></canvas></button>
+              <div class="speech" id="speech" aria-live="polite" hidden></div>
+            </div>
+            <div class="color-key" aria-hidden="true"><i></i><i></i><i></i></div>
+            <i class="corner top-left"></i><i class="corner top-right"></i><i class="corner bottom-left"></i><i class="corner bottom-right"></i>
+          </div>
+          <figcaption><span class="plate-legend"><b id="figNo"></b><span id="figTitle" data-student="caption"></span></span><button id="greet" class="stage-greet"><svg class="ico"><use href="#i-hand"/></svg><span data-copy="greet"></span></button></figcaption>
+        </figure>
+        <div class="console">
+          <div class="console-head"><h2 data-copy="actions"></h2><span class="action-count" id="actionCount">01 / 09</span><button id="pause" class="pause plain" aria-pressed="false"><svg class="ico"><use href="#i-pause"/></svg></button></div>
+          <div class="action-list" id="actions" role="group" data-aria="chooseAction"></div>
+          <div class="direction-tools">
+            <button id="follow" class="skew follow" aria-pressed="false"><span><svg class="ico"><use href="#i-track"/></svg><span id="followText" data-student="follow"></span></span></button>
+            <button class="plain spin" id="spin" hidden><svg class="ico"><use href="#i-spin"/></svg><span data-copy="spin"></span></button>
+            <span class="direction-note" id="directionNote" role="status"></span>
+          </div>
+          <div class="char-hud" id="characterHud" data-pet="hibiki">
+            <div class="hud-hibiki" id="hudHibiki">
+              <button type="button" class="hud-tag" id="hudBeatTrigger" title="启动六拍应援节拍">
+                <i class="hud-dot" aria-hidden="true"></i><span>六拍应援</span>
+              </button>
+              <div class="beat-rail" id="beatRail" role="group" aria-label="猫冢响六拍应援节拍轨">
+                <button type="button" class="beat-cell" data-beat="0"><span>01</span></button>
+                <button type="button" class="beat-cell" data-beat="1"><span>02</span></button>
+                <button type="button" class="beat-cell" data-beat="2"><span>03</span></button>
+                <button type="button" class="beat-cell" data-beat="3"><span>04</span></button>
+                <button type="button" class="beat-cell is-peak" data-beat="4" title="第五拍 · 跃起星光"><span>05</span></button>
+                <button type="button" class="beat-cell" data-beat="5"><span>06</span></button>
+              </div>
+              <span class="hud-readout" id="hudBeatNote">待机</span>
+            </div>
+            <div class="hud-toki" id="hudToki" hidden>
+              <button type="button" class="hud-tag" id="hudLockTrigger" title="开启十六方向转椅锁定">
+                <svg class="hud-mini-ring" viewBox="0 0 28 28" aria-hidden="true">
+                  <circle class="mini-track" cx="14" cy="14" r="10"/>
+                  <circle class="mini-arc" id="hudMiniArc" cx="14" cy="14" r="10" pathLength="360" stroke-dasharray="360" stroke-dashoffset="360"/>
+                </svg>
+                <span id="hudLockLabel">360° 锁定</span>
+              </button>
+              <div class="lock-bar" aria-hidden="true"><i id="hudLockFill"></i></div>
+              <span class="hud-readout" id="hudLockDeg">000°</span>
+              <button type="button" class="skew hud-card-btn" id="hudOpenCard" hidden><span><svg class="ico" aria-hidden="true"><use href="#i-envelope"/></svg><span>白垩之预告状</span></span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="chapter-foot"><i class="foot-mark" aria-hidden="true"></i><a class="chapter-cue next" href="#journal"><span>02 // 学生手记</span><svg class="ico " aria-hidden="true"><use href="#i-down"/></svg></a></div>
+    </section>
+
+    <section class="chapter chapter-archive" id="journal" data-anchor="journal" data-index-title="ARCHIVE" aria-labelledby="journalTitle" tabindex="-1">
+      <div class="chapter-bar"><span class="chapter-kicker" lang="en"><b>02</b><i></i>FIELD NOTES</span><span class="bar-rule" aria-hidden="true"></span><a class="chapter-cue previous" href="#stage"><svg class="ico upward" aria-hidden="true"><use href="#i-down"/></svg><span>01 // 角色舞台</span></a></div>
+      <div class="archive-spread">
+        <div class="dossier">
+          <span class="archive-watermark" aria-hidden="true">02</span>
+          <h2 class="chapter-title" id="journalTitle" data-copy="journal"></h2>
+          <p class="dossier-club" id="journalClub"></p>
+          <article class="student-story"><h3 data-student="story"></h3><p data-student="storyText"></p></article>
+          <div class="memorial">
+            <figure class="memo-frame" data-aria="memorial"><img id="lobbyThumb" src="./assets/official/hibiki-cheer-lobby.webp" alt="" loading="lazy"><span class="memo-redline" aria-hidden="true">182 × 144</span></figure>
+            <div class="memo-copy"><p class="micro" data-copy="memorialEn" lang="en"></p><h3 data-student="lobby"></h3></div>
+            <p class="memo-description" data-student="lobbyText"></p>
+          </div>
+          <a class="source-link" id="creationLink"><span data-copy="creation"></span><svg class="ico " aria-hidden="true"><use href="#i-up"/></svg></a>
+        </div>
+        <figure class="signature">
+          <div class="signature-art">
+            <div class="stage-register" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <span class="figure-legend" lang="en">SIGNATURE MOVE</span>
+            <span class="movement-code" id="movementCode" aria-hidden="true"></span>
+            <svg class="motion-dial" viewBox="0 0 440 280" aria-hidden="true"><g fill="none" stroke="currentColor"><ellipse cx="220" cy="163" rx="183" ry="68" transform="rotate(-15 220 163)"/><ellipse cx="220" cy="163" rx="191" ry="75" stroke-dasharray="2 9" transform="rotate(-15 220 163)"/><path d="M15 163h410m-205-125v212" stroke-dasharray="4 8"/></g></svg>
+            <canvas id="signaturePet" width="520" height="520" role="img"></canvas>
+            <div class="redline-layer" id="redlineLayer" aria-hidden="true">
+              <i class="rl-axis-v"></i>
+              <div class="rl-top-span"><span>520 × 520 HD CANVAS</span></div>
+              <div class="rl-subject-span"><span>340px H</span></div>
+              <div class="rl-baseline"><span>⊥ Y=460 BASELINE</span></div>
+              <div class="rl-foot-specs">
+                <span class="rl-chip">ATLAS 1536×2288 · CELL 192×208</span>
+                <span class="rl-chip" id="redlineSpecB">6 BEATS · 190ms/F</span>
+              </div>
+            </div>
+          </div>
+          <figcaption><h3 data-student="signature"></h3><p data-student="signatureText"></p>
+            <div class="signature-tools"><button class="text-link" id="signaturePlay"><svg class="ico " aria-hidden="true"><use href="#i-play"/></svg><span data-student="signaturePlay"></span></button>
+            <button class="text-link" id="signatureNext" hidden><span data-copy="nextDirection"></span><svg class="ico " aria-hidden="true"><use href="#i-arrow"/></svg></button>
+            <button class="text-link redline-toggle" id="redlineToggle" type="button" aria-pressed="false"><svg class="ico" aria-hidden="true"><use href="#i-ruler"/></svg><span>工程红线透视</span></button></div>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="chapter-foot"><i class="foot-mark" aria-hidden="true"></i><a class="chapter-cue next" href="#chat"><span>03 // MomoTalk</span><svg class="ico " aria-hidden="true"><use href="#i-down"/></svg></a></div>
+    </section>
+
+    <section class="chapter chapter-chat" id="chat" data-anchor="chat" data-index-title="MOMOTALK" aria-labelledby="chatLabel" tabindex="-1">
+      <div class="chapter-bar"><span class="chapter-kicker" lang="en"><b>03</b><i></i>MOMOTALK</span><span class="bar-rule" aria-hidden="true"></span><a class="chapter-cue previous" href="#journal"><svg class="ico upward" aria-hidden="true"><use href="#i-down"/></svg><span>02 // 学生手记</span></a></div>
+      <div class="comms-spread">
+        <div class="conversation">
+          <h2 class="chapter-title" id="chatLabel" data-copy="talk"></h2>
+          <div class="talk-person">
+            <img id="chatAvatar" alt="" width="42" height="42" loading="lazy">
+            <div class="talk-meta"><strong data-student="name"></strong><p data-student="club"></p></div>
+            <div class="bond-meter" id="bondMeter" aria-label="羁绊进度">
+              <div class="bond-head">
+                <svg class="ico bond-heart" aria-hidden="true"><use href="#i-heart"/></svg>
+                <span class="bond-label" id="bondLabel">羁绊 0 / 3</span>
+              </div>
+              <div class="bond-ticks" id="bondTicks" aria-hidden="true"><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="talk-thread"><div class="messages" id="messages" role="log" tabindex="0" aria-labelledby="chatLabel" aria-live="polite" aria-relevant="additions"></div></div>
+          <div class="chat-compose">
+            <div class="reply-label"><svg class="ico " aria-hidden="true"><use href="#i-chat"/></svg><span data-copy="reply"></span></div>
+            <div class="chat-choices" id="choices" role="group" data-aria="reply"></div>
+            <button class="text-link replay" id="replay" hidden><svg class="ico " aria-hidden="true"><use href="#i-spin"/></svg><span data-copy="replay"></span></button>
+          </div>
+        </div>
+        <figure class="comms-figure">
+          <div class="talk-stage">
+            <div class="stage-register" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <span class="figure-legend" lang="en">LIVE CHANNEL</span>
+            <svg class="comms-reticle" viewBox="0 0 320 320" aria-hidden="true"><g fill="none" stroke="currentColor"><circle cx="160" cy="160" r="117"/><circle cx="160" cy="160" r="127" stroke-dasharray="1 10"/><path d="M16 160h35m218 0h35M160 15v35m0 220v35"/></g></svg>
+            <div class="bond-sparks" id="bondSparks" aria-hidden="true"></div>
+            <canvas id="chatPet" width="520" height="520" role="img"></canvas>
+          </div>
+          <figcaption><span class="channel-name"><i aria-hidden="true"></i><b data-student="name"></b></span><span id="channelAction"></span></figcaption>
+        </figure>
+      </div>
+      <div class="chapter-foot"><i class="foot-mark" aria-hidden="true"></i><a class="chapter-cue next" href="#downloads"><span>04 // 桌面领回</span><svg class="ico " aria-hidden="true"><use href="#i-down"/></svg></a></div>
+    </section>
+
+    <section class="chapter chapter-deploy" id="downloads" data-anchor="downloads" data-index-title="DEPLOY" aria-labelledby="adoptTitle" tabindex="-1">
+      <div class="chapter-bar"><span class="chapter-kicker" lang="en"><b>04</b><i></i>DEPLOY</span><span class="bar-rule" aria-hidden="true"></span><a class="chapter-cue previous" href="#chat"><svg class="ico upward" aria-hidden="true"><use href="#i-down"/></svg><span>03 // MomoTalk</span></a></div>
+      <div class="deploy-body">
+        <header class="deploy-title"><h2 class="chapter-title" id="adoptTitle" data-copy="downloads"></h2><p data-copy="downloadsSub"></p></header>
+        <div class="deploy-layout">
+          <div id="packages" class="packages"></div>
+          <article class="install-console" id="pageInstall" aria-labelledby="agentTitle">
+            <div class="install-heading"><span class="icon-tile"><svg class="ico" aria-hidden="true"><use href="#i-terminal"/></svg></span><h3 id="agentTitle" data-copy="agent"></h3></div><p data-copy="agentIntro"></p>
+            <div class="install-targets" role="group" data-aria="installTarget">
+              <button class="skew" data-install-pet="hibiki"><span></span></button>
+              <button class="skew" data-install-pet="toki"><span></span></button>
+            </div>
+            <div class="agent-drop-dock" id="agentDropDock" aria-live="polite">
+              <div class="dock-pet-wrap"><canvas id="dockPetCanvas" width="520" height="520" aria-hidden="true"></canvas></div>
+              <div class="dock-copy">
+                <strong id="dockTitle">当前目标 · 猫冢响</strong>
+                <span id="dockHint">可直接把左侧小桌宠拖进此区切换</span>
+              </div>
+              <span class="dock-tag" id="dockBadge">DRAG IN</span>
+            </div>
+            <div data-installer></div>
+          </article>
+        </div>
+        <details class="manual"><summary><svg class="ico" aria-hidden="true"><use href="#i-book"/></svg><span data-copy="manual"></span><svg class="ico chevron" aria-hidden="true"><use href="#i-chevron"/></svg></summary><div class="manual-body"><ol id="manualSteps"></ol><p data-copy="spec"></p></div></details>
+      </div>
+      <footer class="credits">
+        <div><h2 data-copy="sources"></h2><p data-copy="credits"></p></div>
+        <div class="credit-links"><a href="https://bluearchive.jp/"><span data-copy="original"></span><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></a><a href="https://x.com/JAZZ_JACK_"><span data-copy="artist"></span><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></a><a href="https://github.com/MIBXR/blue-archive-pets"><span data-copy="repo"></span><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></a></div>
+      </footer>
+    </section>
+  </main>
+
+  <template id="chatReply"><button type="button" class="reply"><span></span><svg class="ico" aria-hidden="true"><use href="#i-arrow"/></svg></button></template>
+  <template id="trackOption">
+    <button type="button" class="track-option" role="option" tabindex="-1"><span class="track-index"></span><span class="track-name"></span><span class="track-tag" hidden></span><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></button>
+  </template>
+  <template id="packageRow">
+    <article class="package-row">
+      <div class="package-avatar" title="按住拖入右侧 Agent 一键安装区"><canvas role="img" width="520" height="520"></canvas><span class="drag-pill" aria-hidden="true">拖入安装</span></div>
+      <div class="package-main">
+        <div class="package-name"><h3></h3><span class="version"></span></div>
+        <p class="edition-note"></p>
+        <small class="digest"></small>
+      </div>
+      <div class="package-links">
+        <a class="skew follow zip-link" download><span><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg><span data-copy="zip"></span></span></a>
+        <a class="source-link release-link" hidden><span data-copy="releases"></span><svg class="ico" aria-hidden="true"><use href="#i-up"/></svg></a>
+      </div>
+    </article>
+  </template>
+
+  <template id="installerControls">
+    <label class="activate"><span class="check-field"><input type="checkbox"><svg class="ico" aria-hidden="true"><use href="#i-check"/></svg></span><span data-copy="activate"></span></label>
+    <button class="skew primary copy-instruction" disabled><span><svg class="ico copy-icon" aria-hidden="true"><use href="#i-copy"/></svg><svg class="ico done-icon" aria-hidden="true"><use href="#i-check"/></svg><span data-copy-label></span></span></button>
+    <details class="instruction"><summary><span data-copy="fullInstruction"></span><svg class="ico chevron" aria-hidden="true"><use href="#i-chevron"/></svg></summary><pre tabindex="0" data-aria="instructionLabel"></pre></details>
+    <span class="feedback" role="status"></span>
+  </template>
+  <dialog id="download" aria-labelledby="downloadHeading downloadTitle">
+    <header class="dispatch-bar">
+      <img src="./assets/official/millennium-wiki.png" alt="">
+      <h2 id="downloadHeading" data-copy="quickTitle"></h2>
+      <span id="downloadFolio" lang="en"></span>
+      <button type="button" class="dispatch-close" data-close data-aria="closeDownload"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button>
+    </header>
+    <div class="dispatch-body">
+      <section class="dispatch-dossier" aria-labelledby="downloadTitle">
+        <div class="dispatch-plate" aria-hidden="true">
+          <span id="downloadIndex"></span>
+          <img id="downloadAvatar" alt="">
+        </div>
+        <div class="dispatch-record">
+          <p id="downloadRoman" lang="en"></p>
+          <h3 id="downloadTitle"></h3>
+          <p class="dispatch-edition"><span id="downloadEdition"></span><span id="downloadVersion"></span></p>
+          <div class="install-targets" role="group" data-aria="installTarget">
+            <button type="button" class="skew" data-install-pet="hibiki"><span></span></button>
+            <button type="button" class="skew" data-install-pet="toki"><span></span></button>
+          </div>
+        </div>
+      </section>
+      <div class="dispatch-commands">
+        <section class="dispatch-payload" aria-labelledby="downloadZipTitle">
+          <a id="zip" download>
+            <h3 id="downloadZipTitle" data-copy="fullZip"></h3>
+            <span class="dispatch-download-icon"><svg class="ico" aria-hidden="true"><use href="#i-download"/></svg></span>
+            <code id="downloadFilename"></code>
+          </a>
+          <p data-copy="zipContents"></p>
+          <div id="downloadDigest" hidden><span data-copy="sha"></span><code></code></div>
+        </section>
+        <section class="dispatch-agent" aria-labelledby="downloadAgentTitle">
+          <h3 id="downloadAgentTitle"><svg class="ico" aria-hidden="true"><use href="#i-terminal"/></svg><span data-copy="agent"></span></h3>
+          <p data-copy="quickAgentIntro"></p>
+          <div data-installer></div>
+        </section>
+      </div>
+    </div>
+  </dialog>
+  <dialog id="callingCard" aria-labelledby="cardTitle">
+    <div class="dialog-bar"><div><svg class="ico" aria-hidden="true"><use href="#i-envelope"/></svg><span class="bar-code" data-copy="cardBar"></span></div><button class="icon-btn" data-close data-aria="closeCard"><svg class="ico" aria-hidden="true"><use href="#i-close"/></svg></button></div>
+    <div class="card-body"><div class="calling-paper">
+      <svg class="card-engraving" viewBox="0 0 440 240" aria-hidden="true"><g transform="translate(310 54) rotate(-23)" fill="none"><ellipse rx="143" ry="42"/><ellipse rx="136" ry="38"/><ellipse rx="127" ry="34"/><ellipse rx="84" ry="78"/><ellipse rx="79" ry="74" stroke-dasharray="1 5"/><path d="M-159 0h318M0-93v186"/></g></svg>
+      <div class="card-seal" aria-hidden="true"><svg viewBox="0 0 64 64"><path d="m32 2 28 30-28 30L4 32Z M32 9l21 23-21 23-21-23Z"/><path d="M4 32h9m38 0h9M32 2v8m0 44v8"/></svg><span>04</span></div>
+      <h2 id="cardTitle" data-copy="cardTitle"></h2><p data-copy="cardBody"></p><em data-copy="cardSignature"></em>
+    </div></div>
+  </dialog>
+  <noscript><nav class="shell"><a href="./hibiki.html">Hibiki · v1.1</a> / <a href="./toki.html">Toki · v1.0</a> · <a href="./downloads/hibiki-cheerleader-fullbody-handdrawn-portable.zip" download>Hibiki ZIP</a> / <a href="./downloads/toki-bunny-fullbody-handdrawn-portable.zip" download>Toki ZIP</a></nav></noscript>
+</body>
 </html>
